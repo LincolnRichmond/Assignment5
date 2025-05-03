@@ -81,4 +81,4 @@ def delete_sandwich(sandwich_id: int, db: Session = Depends(get_db)):
     sandwich = sandwiches.read_one(db, sandwich_id=sandwich_id)
     if sandwich is None:
         raise HTTPException(status_code=404, detail="Sandwich not found")
-    return sandwiches.delete(db=db, sandwich_id=sandwich_id) #change
+    return sandwiches.delete(db=db, sandwich_id=sandwich_id) #changes
